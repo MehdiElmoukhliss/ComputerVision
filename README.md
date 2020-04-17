@@ -9,9 +9,4 @@ Je mets ici mes codes en v.0.x :
 
 3/ Analyse des objets présents dans les images
 
-**Pré-requis :**
-
-0.1/ Script pour collecter les tweets -> non fournit
-
-0.2/ Script pour se constituer une banque d'images (par ex. à partir de tweets) -> à venir
 
