@@ -64,7 +64,7 @@ dbPhoto <- db %>%
   #enlever les GIFS | le mot "video_thumb" est present dans l'URL dans media_url:
    dbPhoto <- filter(dbPhoto, !grepl('video_thumb', media_url)) 
   
-#creation d'une colonne avec l'adresse en local pour chaque image telechargee
+#creation d'une colonne "FichierImg" (si elle n'existe pas) destinee a inscrire l'adresse locale de chaque image telechargee
 NomsCol <- ""
    for (i in 1:length(colnames(dbPhoto))){
      NomsCol <- paste(nomsCol,colnames(dbPhoto)[i])
@@ -75,17 +75,16 @@ NomsCol <- ""
      dbPhoto$FichierImg <- as.character(dbPhoto$FichierImg)
    }
 
-#RECUPERER LES IMAGES
-
-
+##RECUPERER LES IMAGES
 
 #recuperer TOUTES les images
 nbPhotos <- nrow(dbPhoto)
 
-# TEMP utile pour TESTS a petite echelle (les 10 premieres images:
-for (i in 1:10){
+# TEMP utile pour TESTS a petite echelle (les 10 premieres images) :
+# for (i in 1:10){
 
-#for (i in 1:nbPhotos){   #pour chaque image...
+# Sinon : telecharger toutes les images
+for (i in 1:nbPhotos){   #pour chaque image...
   
   #identification de l'URL de l'image
   AdresseURLimg <- unlist(dbPhoto$media_url[i])
@@ -119,6 +118,7 @@ print(Message1)
 #enregistrer la base sous un nouveau nom : 
 saveRDS(dbPhoto, CheminEtFichierNewBase)
 print(paste(nbFichiersFaits, " Images telechargees, nouvelle base cree. Voir : ", CheminEtFichierNewBase))
+
 #decharger la memoire
 nbFichiersFaits <- ""
 i <- ""
