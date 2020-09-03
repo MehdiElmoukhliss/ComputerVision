@@ -1,7 +1,7 @@
 # ComputerVision
 Image analysis with IA
 
-ComputerVision est un sous-projet mené par Mehdi Elmoukhliss (TSM Toulouse) dans le cadre du projet Laboratoire du confinement porté par Pr. Christophe Benavent (voir https://github.com/BenaventC/BarometreConfinement).
+ComputerVision est un sous-projet mené par Mehdi Elmoukhliss (TSM Toulouse) dans le cadre du projet Baromètre du confinement porté par Pr. Christophe Benavent (voir https://github.com/BenaventC/BarometreConfinement).
 
 Je mets dans ce repo les codes relatifs à l'analyse d'image et la base de données utilisée, ainsi que la base de données source (ie. non étiquettée).
 
