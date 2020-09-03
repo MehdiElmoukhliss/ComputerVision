@@ -2,7 +2,7 @@
 
 ComputerVision est un sous-projet mené par Mehdi Elmoukhliss (TSM Toulouse) dans le cadre du projet Baromètre du confinement porté par Pr. Christophe Benavent (voir https://github.com/BenaventC/BarometreConfinement).
 
-Je mets dans ce repo les codes relatifs à l'analyse d'image et la base de données utilisée, ainsi que la base de données source (ie. non étiquettée).
+Je mets dans ce repo les codes relatifs à l'analyse d'image ainsi que la base de données source (non étiquettée).
 
 La base de données source consiste en 49 820 tweets (dont des retweets) contenant le hashtag #ConfinementJour12. Ils ont été émis et collectés par Christophe Benavent dans le cadre du Laboratoire du confinement entre le 21 et le 29 mars 2020.
 
