@@ -55,17 +55,6 @@ dbPhoto <- db %>%
   #enlever les GIFS | le mot "video_thumb" est present dans l'URL dans media_url:
   dbPhoto <- filter(dbPhoto, !grepl('video_thumb', media_url)) 
   
-  # #creation d'une colonne avec l'adresse en local pour chaque image telechargee
-  # NomsCol <- ""
-  #    for (i in 1:length(colnames(dbPhoto))){
-  #      NomsCol <- paste(nomsCol,colnames(dbPhoto)[i])
-  #    }
-  #    if (grepl("FichierImg", NomsCol) == FALSE){
-  #      dbPhoto <- cbind(dbPhoto, FichierImg="")
-  #      #force le type de la nouvelle colonne en Character
-  #      dbPhoto$FichierImg <- as.character(dbPhoto$FichierImg)
-  #    }
-
 #2/ RECUPERER LES IMAGES
 
 #TEST (utile pour des tests a petite echelle)
@@ -105,6 +94,6 @@ pourcentage <- Manquants / nbPhotos * 100
 Message1 <- paste("IMAGES MANQUANTES: ", Manquants, " sur ", nbPhotos, " = ", pourcentage, "%", sep="")
 print(Message1)
 
-#enregistrer la base sous un nouveau nom : 
+#enregistrer la base sous un nouveau nom
 saveRDS(dbPhoto, CheminEtFichierNewBase)
 print(paste(nbFichiersFaits, " Images telechargees, nouvelle base cree. Voir : ", CheminEtFichierNewBase, sep=""))
