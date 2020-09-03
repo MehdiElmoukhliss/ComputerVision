@@ -1,5 +1,4 @@
 # ComputerVision
-Image analysis with IA
 
 ComputerVision est un sous-projet mené par Mehdi Elmoukhliss (TSM Toulouse) dans le cadre du projet Baromètre du confinement porté par Pr. Christophe Benavent (voir https://github.com/BenaventC/BarometreConfinement).
 
